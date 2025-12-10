@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>Seja Bem-Vindo. Você chegou em Hogwarts !</h1>
+   
+     <img src="https://loghi-famosi.com/wp-content/uploads/2021/02/Hogwarts-Logo.png" alt="" srcset="" width="200">
+
+    <p>
+        Hogwarts é um universo mágico que se destaca por sua rica história e
+        encanto. Fundada no século X, a escola é um internato de magia para bruxos
+        e bruxas entre 11 e 17 anos. Cada livro da série Harry Potter corresponde
+        a um ano letivo, com a batalha final ocorrendo em Hogwarts. A escola é
+        cercada por feitiços e encantamentos que a tornam impenetrável para os
+        Muggles, ou trouxas. Hogwarts possui uma arquitetura que combina elementos
+        medievais e modernos, e é um lugar de crescimento tanto mágico quanto
+        moral. As casas de Hogwarts, Grifinória, Sonserina, Lufa-Lufa e Corvinal,
+        simbolizam características nobres e desonrosas dos bruxos que habitam a
+        escola.
+    </p>
+    <h1>Vamos descobrir a sua casa ?</h1>
+    <p>Clique no chapéu</p>
+
+    <img src="chapeu seletor.png" alt="chapeu" width="300" onclick="casa()" id="chapeu" />
+
+    <h2 id="casaEscolhida"></h2>
+
+
+
+</body>
+
+<script>
+    function casa() {
+        let numero = Math.floor(Math.random() * 4)
+
+
+        alert(
+            "Hmmm... interessante... muito interessante... Você tem qualidades que se encaixam em mais de uma casa... Mas onde, onde, será seu verdadeiro lar? Vamos descobrir..."
+        );
+        alert("Hmmmm...")
+
+        if (numero === 0) {
+            alert("🦁 Grifinória! Coragem, bravura e um coração ardente! Não foges de um desafio... Ah, sim, vejo que tens alma de um verdadeiro grifinório!")
+            document.body.style.backgroundColor = "#FF0000";
+            document.getElementById("casaEscolhida").innerText = "🦁 Grifinória! "
+        } else if (numero === 1) {
+            
+            alert("Orgulho-me de ser da Sonserina, uma casa que valoriza a ambição, a astúcia e a determinação. Meu lema é 'O poder sem limites é o maior destino do homem', e isso reflete a natureza estratégica e resoluta dos Sonserinos. A Sonserina é uma casa que incentiva a conquista dos próprios objetivos e o engenho, e honro-me por pertencer a ela. Meu lema é um princípio que orienta minha vida e me ajuda a alcançar a verdadeira grandeza")
+            document.body.style.backgroundColor = "#008000";
+            document.getElementById("casaEscolhida").innerText = "🐍 Sonserina "
+        } else if (numero === 2) {
+            alert("Sou da Corvinal, uma casa que valoriza a inteligência, a criatividade e a sabedoria.Meu lema é 'O espírito sem limites é o maior tesouro do homem',e isso reflete a natureza excentrica e inovadora dos Corvinos.A Corvinal é uma casa que incentiva a busca por conhecimento e a curiosidade, e eu me orgulho de ser parte dela.Meu lema é uma verdade que guia minha vida e me ajuda a encontrar a verdadeira sabedoria.")
+               document.body.style.backgroundColor = "#0000FF";
+            document.getElementById("casaEscolhida").innerText = "🦅 Corvinal"
+        } else {
+           
+            alert("Com orgulho venho da Lufa-Lufa, casa que valoriza a lealdade, a dedicação e a justiça. Meu lema é 'O coração sincero é o mais nobre tesouro do homem', e isso reflete a natureza acolhedora e perseverante dos Lufanos. A Lufa-Lufa é uma casa que incentiva o trabalho em equipe, o fair play e a honestidade, e tenho honra em fazer parte dela. Meu lema é uma verdade que guia minha vida e me ajuda a cultivar a verdadeira felicidade.")
+             document.body.style.backgroundColor = "#DAA520"
+            document.getElementById("casaEscolhida").innerText = "🦡 Lufa-Lufa"
+
+
+        }
+
+    }
+</script>
+
+</html>
